@@ -12,6 +12,9 @@ class Robot:
         # убедимся, что после завершения кода двигатели останавливаются
         atexit.register(self.stop_motors)
 
+    def convert_speed(self, speed):
+        return (speed * 255) // 100
+
     def stop_motors(self):
         self.left_motor.run(Raspi_MotorHAT.RELEASE)
         self.right_motor.run(Raspi_MotorHAT.RELEASE)
