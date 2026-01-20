@@ -9,7 +9,7 @@ class Robot:
         # получение локальных переменных для каждого двигателя
         self.left_motor = self._mh.getMotor(1)
         self.right_motor = self._mh.getMotor(2)
-        # убедимся, что после завершения кода двигатели останавдиваются
+        # убедимся, что после завершения кода двигатели останавливаются
         atexit.register(self.stop_motors)
 
     def stop_motors(self):
