@@ -1,4 +1,4 @@
-from motion.robot import Robot
+from mobirob.robot import Robot
 from Raspi_MotorHAT import Raspi_MotorHAT
 from time import sleep
 
