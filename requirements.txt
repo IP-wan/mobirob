@@ -1,5 +1,6 @@
 colorzero==2.0
 gpiozero==2.0.1
-# Raspi_MotorHAT @ git+https://github.com/orionrobots/Raspi_MotorHAT@1a3198d46b23f9936ac133a3b5f25b887eb0ad25
+git+https://github.com/orionrobots/Raspi_MotorHAT
 setuptools==80.9.0
 wheel==0.45.1
+smbus==1.1.post2
