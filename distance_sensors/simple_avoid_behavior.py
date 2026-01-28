@@ -16,8 +16,6 @@ class ObstacleAvoidingBehavior:
         return self.speed
 
     def run(self):
-        self.robot.set_pan(0)
-        self.robot.set_titl(0)
         while True:
         # Получение показаний от датчика в метрах
             left_distance = self.robot.left_distance_sensor.distance
