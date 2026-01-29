@@ -5,3 +5,4 @@ setuptools==80.10.1
 wheel==0.46.3
 smbus==1.1.post2
 lgpio==0.2.2.0
+ledshim==0.0.3
