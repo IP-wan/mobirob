@@ -8,7 +8,7 @@ class ObstacleAvoidingBehavior:
         self.robot = the_robot
         self.speed = 60
         # Вычисления для светодиодов
-        self.led_half = int(self.robot.leds.leds_count/2)
+        self.led_half = int(self.robot.leds.count/2)
         self.sense_colour = 255, 0, 0
 
     def distance_to_led_bar(self, distance):
