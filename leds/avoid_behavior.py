@@ -14,7 +14,7 @@ class ObstacleAvoidingBehavior:
     def distance_to_led_bar(self, distance):
         # при уменьшении значения загоралось больше светодиодов
         inverted = max(0, 1.0 - distance)
-        led_bar = int(round(inverted * self.led_half))
+        led_bar = int(round(inverted * self.led_half)) + 1
         return led_bar
 
     def display_state(self, left_distance, right_distance):
@@ -76,7 +76,7 @@ class ObstacleAvoidingBehavior:
                 self.robot.set_left(furthest_speed)
                 self.robot.set_right(nearest_speed)
             # Wait our delay time
-            sleep(0.001)
+            sleep(delay * 0.001)
 
 
 
