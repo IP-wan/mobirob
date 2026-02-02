@@ -1,7 +1,6 @@
 from time import sleep
 import math
 
-from distance_sensors.simple_avoid_behavior import behavior
 from robot import Robot
 
 
