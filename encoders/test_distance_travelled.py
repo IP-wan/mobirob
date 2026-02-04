@@ -1,6 +1,6 @@
 from multiprocessing.resource_sharer import stop
 
-from encoders.test_encoders import stop_at_time
+from test_encoders import stop_at_time
 from robot import Robot
 import time
 import math
