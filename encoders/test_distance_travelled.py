@@ -1,6 +1,3 @@
-from multiprocessing.resource_sharer import stop
-
-from test_encoders import stop_at_time
 from robot import Robot
 import time
 import math
@@ -16,7 +13,7 @@ def ticks_to_mm(ticks):
     return int(ticks_to_mm_const * ticks)
 
 bot = Robot()
-top_at_time = time.time() + 1
+stop_at_time = time.time() + 1
 
 logging.basicConfig(level=logging.INFO)
 bot.set_left(90)
