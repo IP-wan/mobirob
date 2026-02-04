@@ -3,6 +3,7 @@ from gpiozero import DistanceSensor
 import atexit
 import leds_led_shim
 from servos import Servos
+from encoder_counter import EncoderCounter
 
 
 class Robot:
@@ -18,6 +19,9 @@ class Robot:
                                                    queue_len=2)
         self.right_distance_sensor = DistanceSensor(echo=5, trigger=6,
                                                     queue_len=2)
+        # настройка энкодеров
+        self.left_encoder = EncoderCounter(4)
+        self.right_encoder = EncoderCounter(26)
         self.leds = leds_led_shim.Leds()
         # Настроить сервоприводы для механизма поворота и наклона
         self.servos = Servos(addr=motorhat_addr)
@@ -52,6 +56,9 @@ class Robot:
         self.leds.show()
         # Сбрасываем сервоприводы
         self.servos.stop_all()
+        # Сбрасываем значения обработчиков датчиков
+        self.left_encoder.stop()
+        self.right_encoder.stop()
 
     def set_pan(self, angle):
         self.servos.set_servo_angle(0, angle)
