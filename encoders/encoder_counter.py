@@ -12,8 +12,7 @@ class EncoderCounter:
 
     def set_direction(self, direction):
         """Значение должно быть -1 или 1."""
-        assert abs(direction) == 1, ("Direction %s should be "
-                                     "1 or -1") % direction
+        assert abs(direction) == 1, "Direction %s should be 1 or -1" % direction
         self.direction = direction
 
     def reset(self):

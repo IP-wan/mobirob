@@ -1,6 +1,5 @@
 import logging
 
-from gpiozero import Motor
 
 logger = logging.getLogger('pid_controller')
 
