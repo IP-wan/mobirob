@@ -1,4 +1,3 @@
-from encoders.test_encoders import stop_at_time
 from robot import Robot
 from pid_controller import PIController
 import time
