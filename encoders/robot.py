@@ -7,6 +7,9 @@ from encoder_counter import EncoderCounter
 
 
 class Robot:
+    wheel_diameter_mm = 66.0
+    ticks_per_revolution = 40.0
+    wheel_distance_mm = 148.0
 
     def __init__(self, motorhat_addr=0x6f):
         # Setup the motorhat with the passed in address
@@ -20,6 +23,8 @@ class Robot:
         self.right_distance_sensor = DistanceSensor(echo=5, trigger=6,
                                                     queue_len=2)
         # настройка энкодеров
+        EncoderCounter.set_constants(self.wheel_diameter_mm,
+                                     self.ticks_per_revolution)
         self.left_encoder = EncoderCounter(4)
         self.right_encoder = EncoderCounter(26)
         self.leds = leds_led_shim.Leds()
