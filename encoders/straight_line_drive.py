@@ -20,8 +20,10 @@ while time.time() < stop_at_time:
     left = bot.left_encoder.pulse_count
     right = bot.right_encoder.pulse_count
     error = left - right
+    print(f"error: {error}")
     # Вычисляем частоту вращения
     adjustment = pid.get_value(error)
+    print(f"adjustment: {adjustment}")
     right_speed = int(speed + adjustment)
     left_speed = int(speed - adjustment)
     logger.debug(f"error: {error} adjustment: {adjustment: .2f}")
