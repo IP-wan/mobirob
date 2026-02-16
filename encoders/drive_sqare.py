@@ -35,7 +35,7 @@ def drive_distances(bot, left_distance, right_distance, speed=80):
 
     primary_encoder.reset()
     secondary_encoder.reset()
-    controller = PIController(proportional_constant=5, integral_constant=0.2)
+    controller = PIController(proportional_constant=0, integral_constant=0)
     # задаем энкодеру направление
     primary_encoder.set_direction(math.copysign(1, speed))
     secondary_encoder.set_direction(math.copysign(1, speed))
