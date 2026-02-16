@@ -13,3 +13,8 @@ class RobotImu:
         _, _, _, x, y, z = self._imu.read_accelerometer_gyro_data()
         return vector(x, y, z)
 
+    def read_accelerometer(self):
+        accel_x, accel_y, accel_z, _, _, _ = (
+            self._imu.read_accelerometer_gyro_data())
+        return vector(accel_x, accel_y, accel_z)
+    
