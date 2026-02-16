@@ -17,4 +17,7 @@ class RobotImu:
         accel_x, accel_y, accel_z, _, _, _ = (
             self._imu.read_accelerometer_gyro_data())
         return vector(accel_x, accel_y, accel_z)
-    
+
+    def read_magnetometer(self):
+        mag_x, mag_y, mag_z = self._imu.read_magnetometer_data()
+        return vector(mag_x, -mag_y, -mag_z)
